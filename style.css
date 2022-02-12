@@ -1,0 +1,92 @@
+@import url("https://fonts.googleapis.com/css2?family=Share+Tech+Mono&display=swap");
+
+:root {
+	--dark-bg-color: rgb(35, 50, 62);
+	--light-bg-color: #e2e2e2;
+	--primary-color: #e48b2c;
+}
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+body {
+	font-family: "Share Tech Mono", monospace;
+}
+
+body main {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	height: 100vh;
+}
+
+.calculator-body {
+	width: 300px;
+	margin: 0 auto;
+	background-color: var(--dark-bg-color);
+	color: var(--light-bg-color);
+	padding: 65px 12px 0px;
+	border-radius: 20px;
+	overflow: hidden;
+}
+
+.calculation-output {
+	text-align: right;
+	font-size: 30px;
+	margin-bottom: 20px;
+	height: 55px;
+}
+
+.calculation-flow {
+	text-align: right;
+	font-size: 16px;
+	margin-bottom: 15px;
+	color: #808080;
+	height: 18px;
+}
+
+.button-body {
+	display: grid;
+	grid-template-columns: repeat(4, 1fr);
+}
+
+.button-body .button {
+	font-size: 16px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	box-shadow: rgb(18, 35, 48) 0px 2px 3px 1px;
+	margin: 5px;
+	border-radius: 10px;
+	border: none;
+	outline: none;
+	background-color: var(--dark-bg-color);
+	color: var(--light-bg-color);
+	padding: 22px 10px;
+}
+
+.button-body .button:active {
+	transform: scale(1.1);
+}
+.button-body .button.equal:active {
+	transform: scale(1.02);
+}
+
+.button-body .operator {
+	color: var(--primary-color);
+}
+
+.button-body .equal {
+	background-color: var(--primary-color);
+	color: var(--light-bg-color);
+	grid-column: 3 / span 2;
+}
+
+.about {
+	margin: 15px 5px 5px 0;
+	text-align: right;
+	font-size: 10px;
+}
